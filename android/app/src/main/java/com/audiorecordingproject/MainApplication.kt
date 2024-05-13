@@ -1,5 +1,6 @@
 package com.audiorecordingproject
 
+import com.dooboolab.audiorecorderplayer.RNAudioRecorderPlayerPackage;
 import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
