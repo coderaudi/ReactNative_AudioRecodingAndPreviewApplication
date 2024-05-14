@@ -1,6 +1,6 @@
 package com.audiorecordingproject
-
-import com.dooboolab.audiorecorderplayer.RNAudioRecorderPlayerPackage;
+import com.rnfs.RNFSPackage; // <------- add package
+import com.dooboolab.audiorecorderplayer.RNAudioRecorderPlayerPackage; // <------- add package
 import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
@@ -12,6 +12,7 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.soloader.SoLoader
 
+
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =
@@ -19,7 +20,8 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
-              // add(MyReactNativePackage())
+              // add(RNAudioRecorderPlayerPackage())  // already linked autolinked
+             //  add(RNFSPackage()) // already added autolinked
             }
 
         override fun getJSMainModuleName(): String = "index"
@@ -41,4 +43,6 @@ class MainApplication : Application(), ReactApplication {
       load()
     }
   }
+
+  
 }
